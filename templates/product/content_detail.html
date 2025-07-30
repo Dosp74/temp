@@ -4,6 +4,13 @@
 <div>
     {{ content_list.content }}
 </div>
+<div class="col-lg-7">
+    {% if content_list.main_image %}
+    <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ content_list.main_image.url }}" alt="main_image"/>
+    {% else %}
+    <img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." />
+    {% endif %}
+</div>
 <section class="mb-5">
     <div class="card bg-light">
         <div class="card-body">
